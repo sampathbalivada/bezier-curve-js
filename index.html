@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bezier Curve</title>
+</head>
+
+<body>
+    <h1>Let's draw Bézier curves</h1>
+
+    <!-- start co-ordinates -->
+    <label for="x1">x1</label>
+    <input type="number" name="x1" id="x1"> <br>
+    <label for="y1">y1</label>
+    <input type="number" name="y1" id="y1"> <br> <br>
+
+    <!-- end co-ordinates -->
+    <label for="x2">x2</label>
+    <input type="number" name="x2" id="x2"> <br>
+    <label for="y2">y2</label>
+    <input type="number" name="y2" id="y2"> <br> <br>
+
+    <button onclick="redrawLine()">Draw Line</button> <br> <br>
+
+    <!-- control point 1 -->
+    <label for="x2">xc1</label>
+    <input type="number" name="xc1" id="xc1"> <br>
+    <label for="y2">yc1</label> 
+    <input type="number" name="yc1" id="yc1"> <br> <br>
+
+    <button onclick="redrawQuadraticBezierCurve()">Draw Quadratic Curve</button> <br> <br>
+
+    <!-- control point 2 -->
+    <label for="x2">xc2</label>
+    <input type="number" name="xc2" id="xc2"> <br>
+    <label for="y2">yc2</label> 
+    <input type="number" name="yc2" id="yc2"> <br> <br>
+
+    <button onclick="redrawCubicBezierCurve()">Draw Cubic Curve</button> <br> <br>
+
+    <!-- canvas to plot the points -->
+
+    <div class="flex-row">
+        <canvas id="mainCanvas" class="black-border"></canvas>
+    </div> <br> <br>
+
+    <button onclick="clearCanvas()">Clear</button>
+
+</body>
+<style>
+    body {
+        text-align: center;
+    }
+
+    canvas {
+        height: 750px;
+        width: 750px;
+    }
+
+    .flex-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .black-border {
+        border-style: solid;
+        border-width: 2px;
+    }
+
+    @media screen and (max-width: 750px) {
+        canvas {
+            height: 90vw;
+            width: 90vw;
+        }
+    }
+</style>
+<script src="./main.js"></script>
+
+</html>
