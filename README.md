@@ -1,5 +1,6 @@
 # Bézier Curves
 
-This repo contains the source code for plotting Bézier Curves in using HTML Canvas using Javascript.
+This repo contains the source code for plotting Bézier Curves using HTML Canvas and Javascript.
 
-For more information and details about the working of Bézier curves, visit my blog here.
+For more information and details about the working of Bézier curves, visit my blog [here](https://blog.sampath.dev/bezier-curves).
+
